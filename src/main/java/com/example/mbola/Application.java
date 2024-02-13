@@ -1,4 +1,4 @@
-package com.example.event_managment;
+package com.example.mbola;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

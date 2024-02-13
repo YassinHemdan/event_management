@@ -1,4 +1,4 @@
-package com.example.event_managment.entities;
+package com.example.mbola.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;

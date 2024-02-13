@@ -1,5 +1,7 @@
-package com.example.event_managment.entities;
+package com.example.mbola.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -36,7 +38,6 @@ public class Organizer {
     private Contact contact;
     private String bio;
 
-    @OneToMany
-//    @JsonManagedReference
+    @OneToMany(mappedBy = "organizer")
     private List<Event> events;
 }

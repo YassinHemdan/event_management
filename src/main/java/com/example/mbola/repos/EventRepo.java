@@ -1,7 +1,8 @@
-package com.example.event_managment.repos;
+package com.example.mbola.repos;
 
-import com.example.event_managment.entities.Event;
+import com.example.mbola.entities.Event;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository

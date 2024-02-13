@@ -1,13 +1,13 @@
-package com.example.event_managment.entities;
+package com.example.mbola.entities;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.awt.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -41,9 +41,9 @@ public class Event {
     private LocalTime start_time;
     @Column(nullable = false)
     private LocalTime end_time;
-    @Column(nullable = false)
+    @Column(name = "lat", nullable = false)
     private double latitude;
-    @Column(nullable = false)
+    @Column(name = "long", nullable = false)
     private double longitude;
     @Column(nullable = false)
     private String address;
@@ -52,8 +52,7 @@ public class Event {
     @Column(nullable = false)
     private int capacity;
 
-//    @ManyToOne
-//    @JoinColumn(name = "organizer_id", referencedColumnName = "organizer_id")
-//    @JsonBackReference
-//    private Organizer organizer;
+    @ManyToOne
+    @JoinColumn(name = "organizer_id", referencedColumnName = "organizer_id")
+    private Organizer organizer;
 }

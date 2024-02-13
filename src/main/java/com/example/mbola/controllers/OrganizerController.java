@@ -1,7 +1,8 @@
-package com.example.event_managment.controllers;
+package com.example.mbola.controllers;
 
-import com.example.event_managment.entities.Organizer;
-import com.example.event_managment.services.serviceImpl.OrganizerServiceImpl;
+import com.example.mbola.dtos.OrganizerEventsDTO;
+import com.example.mbola.entities.Organizer;
+import com.example.mbola.services.serviceImpl.OrganizerServiceImpl;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,7 +14,7 @@ import java.util.List;
 public class OrganizerController {
     private final OrganizerServiceImpl organizerService;
     @GetMapping("/find-all")
-    public List<Organizer> findAll(){
+    public List<OrganizerEventsDTO> findAll(){
         return organizerService.findAll();
     }
 
