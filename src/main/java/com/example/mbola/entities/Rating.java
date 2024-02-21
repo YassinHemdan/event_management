@@ -19,7 +19,7 @@ public class Rating {
     )
     @SequenceGenerator(
             name = "generator",
-            sequenceName = "clients_seq",
+            sequenceName = "ratings_seq",
             allocationSize = 1
     )
     @Column(name = "rating_id")
